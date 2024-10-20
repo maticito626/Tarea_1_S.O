@@ -2,11 +2,23 @@
 
 Este repositorio contiene el código de la tarea 1 de Sistemas Operativos que simula una carrera de autos utilizando hilos (threads) y sincronización mediante mutex.
 
+## Requisitos:
+- Lenguaje: C++ (estandar C++ 11 o superiores).
+- Compilador: GNU g++ (makefile).
+- Plataforma: Sistema operativo Linux o Putty.
+
+## Funcionamiento:
+- Cada auto definido tiene su unico identificador.
+- Cada auto avanza y detiene de manera aleatoria.
+- Por cada auto y en cada iteracion, calcular un valor aleatorio para la distancia que
+avanza (maximo de 10 metros) y cambia la velocidad (entre 100-500 ms).
+- Durante la Carrera se muestra el progreso en tiempo real y total de cada auto y se finaliza cuando todos los autos llegan a la meta definida.
+
 ## Contenido del Código
 
 El archivo principal incluye las siguientes funcionalidades:
 
-- **Librerías**: Se utiliza la librería `pthread` para gestionar los hilos, donde cada hilo representa un auto en la carrera.
+- **Librerías**: Se utiliza la librería thread para gestionar los hilos, donde cada hilo representa un auto en la carrera.
 - **Mutex**: Se utiliza un mutex para asegurar que los mensajes de salida no se mezclen entre sí, ya que varios autos pueden avanzar simultáneamente.
 - **Funciones principales**:
   - id: Identificador único para cada auto.
