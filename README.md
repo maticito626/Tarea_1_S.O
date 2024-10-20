@@ -9,10 +9,10 @@ El archivo principal incluye las siguientes funcionalidades:
 - **Librerías**: Se utiliza la librería `pthread` para gestionar los hilos, donde cada hilo representa un auto en la carrera.
 - **Mutex**: Se utiliza un mutex para asegurar que los mensajes de salida no se mezclen entre sí, ya que varios autos pueden avanzar simultáneamente.
 - **Funciones principales**:
-  - `id`: Identificador único para cada auto.
-  - `distanciaTotal`: Define la distancia total que cada auto debe recorrer.
-  - `posiciones`: Vector que guarda el lugar de cada auto al finalizar la carrera.
-  - `lugar`: Registra el orden de llegada de los autos.
+  - id: Identificador único para cada auto.
+  - distanciaTotal: Define la distancia total que cada auto debe recorrer.
+  - posiciones: Vector que guarda el lugar de cada auto al finalizar la carrera.
+  - lugar: Registra el orden de llegada de los autos.
 
 Dentro de la función principal de cada auto, se generan números aleatorios para determinar el avance en metros (entre 1 y 10). En cada avance, se imprime un mensaje que muestra los metros recorridos y un mensaje final al concluir la carrera.
 
