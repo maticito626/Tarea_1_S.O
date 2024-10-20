@@ -59,6 +59,6 @@ Mensajes indicando el final de la carrera para cada auto.
 Una vez que todos los autos terminan la carrera, se imprimen las posiciones finales de llegada.
 
 ## Integrantes
-Pamela Kiomi Machino Roa
+Pamela Kiomi Machino Roa -
 Matias Francisco Reyes Bustos
 
