@@ -13,8 +13,7 @@ $(TARGET): $(SRC)
 
 # Regla para limpiar archivos generados
 clean:
-	del /f /q $(TARGET).exe
-#	rm -f $(TARGET) 
+rm -f $(TARGET) 
 #elimina el ejecutable con mingw32-make clean}
 #asegúrase de tener las herramientas Unix instaladas con MinGW o Git Bash.
 	
