@@ -1,10 +1,45 @@
-# Tarea_1_S.O
+# Tarea 1 - Sistemas Operativos: Simulación de Carrera de Autos
 
-Contenido del codigo y funcionamiento:
-El archivo adjunto contiene ademas de este archivo readme trae el codigo que simula la carrera con las respectivas librerias solicitadas como la libreria thread que son para cada auto o autos, trae un Mutex para evitar que las hebras se escriban al mismo tiempo para que asi los mensajes de salida no se mezclen entre si, trae en su primera funcion el comportamiento de cada auto con las siguientes funciones: id (identificador de cada auto unico), distanciaTotal (distancia que recorrera el auto), posiciones (vector que guarda el lugar de cada auto) y lugar (orden de llegada de cada auto) dentro de esta funcion se generan los numeros aleatorios los cuales determinan cuanto avanzara dicho auto (entre 1 a 10 metros de distancia) ademas de imprimir un mensaje cada vez que este avanze con los metros totales ya recorridos y el mensaje de finalizacion de carrera.
+Este repositorio contiene el código de la tarea 1 de Sistemas Operativos que simula una carrera de autos utilizando hilos (threads) y sincronización mediante mutex.
 
-Ejecucion del codigo:
-para compilar el codigo debe seguir los siguientes pasos en su respectiva consola de comandos, para iniciar copie la url de este programa en la pestaña "Code" y dirigase a su consola donde colocara "git clone (url)", tras esto se descargara el archivo "Tarea_1_S.O", se ubicara en el con "cd Tarea_1_S.O/", ejecutelo con el comando "make", ya activado el archivo escribira lo siguiente para iniciar la carrera: "./carrera (largo de la carrera) (numero de autos)" o como ejemplo de prueba "./carrera 20 3".
+## Contenido del Código
 
-Que aparecera en pantalla:
-tras ejecutar y colocar las especificaciones de la carrera se imprimiran mensajes continuos de la simulacion de la carrera tanto cuantos metros avanzados y los metros totales recorridos por cada respectivo auto, tras alcanzar la distancia ya especificada de la carrera se imprimiran los mensajes de las posiciones en las cuales llegaron cada uno de los autos finalizando la ejecucion del programa.
+El archivo principal incluye las siguientes funcionalidades:
+
+- **Librerías**: Se utiliza la librería `pthread` para gestionar los hilos, donde cada hilo representa un auto en la carrera.
+- **Mutex**: Se utiliza un mutex para asegurar que los mensajes de salida no se mezclen entre sí, ya que varios autos pueden avanzar simultáneamente.
+- **Funciones principales**:
+  - `id`: Identificador único para cada auto.
+  - `distanciaTotal`: Define la distancia total que cada auto debe recorrer.
+  - `posiciones`: Vector que guarda el lugar de cada auto al finalizar la carrera.
+  - `lugar`: Registra el orden de llegada de los autos.
+
+Dentro de la función principal de cada auto, se generan números aleatorios para determinar el avance en metros (entre 1 y 10). En cada avance, se imprime un mensaje que muestra los metros recorridos y un mensaje final al concluir la carrera.
+
+## Ejecución del Código
+
+Para ejecutar el código, sigue los siguientes pasos en tu consola de comandos:
+
+1. Clona este repositorio:
+   ```bash
+   git clone <URL_DEL_REPOSITORIO>
+2. Accede al directorio del proyecto:
+   cd Tarea_1_S.O/
+3. Compila el programa utilizando make:
+   make
+4. Ejecuta el programa con el siguiente comando:
+   ./carrera <distancia_de_la_carrera> <numero_de_autos>
+Ejemplo:
+./carrera 20 3
+En este ejemplo, la carrera será de 20 metros y participarán 3 autos.
+
+Salida en Pantalla
+Durante la ejecución del programa, se imprimen mensajes continuos que muestran el progreso de cada auto, incluyendo:
+
+Los metros avanzados en cada iteración.
+Los metros totales recorridos por cada auto.
+Mensajes indicando el final de la carrera para cada auto.
+Una vez que todos los autos terminan la carrera, se imprimen las posiciones finales de llegada.
+Requisitos
+Sistema operativo Linux (o compatible con pthread).
+Compilador con soporte para make y pthread.
