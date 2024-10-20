@@ -4,8 +4,9 @@ Este repositorio contiene el código de la tarea 1 de Sistemas Operativos que si
 
 ## Requisitos:
 - Lenguaje: C++ (estandar C++ 11 o superiores).
-- Compilador: GNU g++ (makefile).
-- Plataforma: Sistema operativo Linux o Putty.
+- Compilador: GNU g++ (makefile) o compilador con soporte para make y pthread.
+- Plataforma: Sistema operativo Linux (o compatible con pthread).
+Compilador con soporte para make y pthread.
 
 ## Funcionamiento:
 - Cada auto definido tiene su unico identificador.
@@ -36,13 +37,17 @@ Para ejecutar el código, sigue los siguientes pasos en tu consola de comandos:
    ```bash
    git clone <URL_DEL_REPOSITORIO>
 2. Accede al directorio del proyecto:
+   ```bash
    cd Tarea_1_S.O/
-3. Compila el programa utilizando make:
+4. Compila el programa utilizando make:
+   ```bash
    make
-4. Ejecuta el programa con el siguiente comando:
+5. Ejecuta el programa con el siguiente comando:
+   ```bash
    ./carrera <distancia_de_la_carrera> <numero_de_autos>
-Ejemplo:
-./carrera 20 3
+6. Ejemplo:
+   ```bash
+   ./carrera 20 3
 En este ejemplo, la carrera será de 20 metros y participarán 3 autos.
 
 Salida en Pantalla
@@ -52,6 +57,4 @@ Los metros avanzados en cada iteración.
 Los metros totales recorridos por cada auto.
 Mensajes indicando el final de la carrera para cada auto.
 Una vez que todos los autos terminan la carrera, se imprimen las posiciones finales de llegada.
-Requisitos
-Sistema operativo Linux (o compatible con pthread).
-Compilador con soporte para make y pthread.
+
